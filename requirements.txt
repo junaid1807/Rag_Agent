@@ -1,0 +1,16 @@
+gradio>=4.0.0
+llama-index
+llama-index-embeddings-huggingface
+llama-index-llms-groq
+llama-index-vector-stores-faiss
+faiss-cpu
+langchain
+langchain-groq
+langchain-community
+langgraph
+arxiv
+duckduckgo-search
+wikipedia
+sentence-transformers
+python-dotenv
+ddgs
