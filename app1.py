@@ -29,7 +29,7 @@ import arxiv as arxiv_lib
 # ═════════════════════════════════════════════════════════════════════════════
 # CONFIG
 # ═════════════════════════════════════════════════════════════════════════════
-LLM_MODEL     = "llama-3.1-8b-instant"
+LLM_MODEL     = "openai/gpt-oss-120b"
 EMBED_MODEL   = "BAAI/bge-small-en-v1.5"
 EMBED_DIM     = 384
 CHUNK_SIZE    = 512
@@ -331,11 +331,11 @@ with gr.Blocks(theme=gr.themes.Soft(), title="RAG Agentic Chatbot") as demo:
                 fn=respond,
                 additional_inputs=[api_key],
                 examples=[
-                    "What is RAG and how does LlamaIndex enable it?",
-                    "Find recent ArXiv papers on LLM agents",
-                    "Explain FAISS vector similarity search",
-                    "What is the ReAct prompting framework?",
-                    "What are the latest AI agent developments in 2025?",
+                    ["What is RAG and how does LlamaIndex enable it?", ""],
+                    ["Find recent ArXiv papers on LLM agents", ""],
+                    ["Explain FAISS vector similarity search", ""],
+                    ["What is the ReAct prompting framework?", ""],
+                    ["What are the latest AI agent developments in 2025?", ""],
                 ],
                 chatbot=gr.Chatbot(height=520, show_label=False),
                 textbox=gr.Textbox(placeholder="Ask anything...", scale=7),
